@@ -26,6 +26,15 @@ repositories {
 }
 
 
+test {
+	testLogging {
+		events "PASSED", "STARTED", "FAILED", "SKIPPED"
+		exceptionFormat = 'full'
+	}
+}
+
+
+
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
